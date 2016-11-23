@@ -1,0 +1,39 @@
+#include "defines.hpp"
+#include "dialogs.hpp"
+
+version = "1.0.0";
+onLoadMission = "Zone Control [1.0.0] - Stratis";
+respawn = "BASE";
+disabledAI = 1;
+author = "C222";
+saving = 0;
+
+//respawnTemplates[] = {"Revive"};
+
+class CfgFunctions
+{
+	#include "config\CfgFunctions.hpp"
+};
+
+class CfgRemoteExecCommands
+{
+	class hint {};
+	class server_fnc_purchaseRequest {};
+};
+
+startFogBase = 10.0;          // base altitude for fog computations (in meters)
+forecastFogBase = 0.0;
+startFogDecay = 0.005;       // decay coefficient - decay of fog with altitude
+forecastFogDecay = 0.005;
+fogBeta0Min = 0.0001;        // beta0 (macroscopic cross-section of atmospheric scatterers at base level) for fog value 0
+fogBeta0Max = 0.02;          // beta0 (macroscopic cross-section of atmospheric scatterers at base level) for fog value 1
+
+class Params
+{
+	#include "config\params.hpp"
+};
+
+class CfgRespawnInventory
+ {
+      #include "config\inventories.hpp"
+ };
